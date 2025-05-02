@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Языки Программирования</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">FDS</div>
+</header>
+
+<section class="hero">
+  <h1>Самые востребованные языки программирования</h1>
+  <p class="sub">Погрузитесь в мир технологий с нуля</p>
+  <div class="badge">Изучение с нами весело и интерактивно</div>
+</section>
+
+<section class="section">
+  <h2>Изучение языков программирования</h2>
+  <div class="description">
+    Мы предлагаем языки: JavaScript, C, C++, HTML и CSS. Эти языки часто используются в программировании и также являются наиболее востребованными в IT
+  </div>
+
+  <div class="slider">
+    <div class="slide active" onclick="window.location.href='javascript.html'" style="cursor: pointer;">
+      <img src="https://img.icons8.com/color/960/javascript.png" alt="JavaScript">
+      <div class="caption">
+        JavaScript — основной язык веб-разработки. Он обеспечивает интерактивность на сайтах, работает во всех браузерах. Используется с HTML и CSS. Применяется для создания одностраничных приложений. Основа современных фреймворков, таких как React и Vue. Расширяет возможности фронтенда и бэкенда (через Node.js). Упрощает создание динамических элементов. Поддерживается большим сообществом. Имеет обширную библиотеку пакетов через npm. Популярен среди начинающих разработчиков.
+      </div>
+    </div>
+    <div class="slide" onclick="window.location.href='c.html'" style="cursor: pointer;">
+      <img src="https://img.icons8.com/color/960/c-programming.png" alt="C">
+      <div class="caption">
+        C — один из самых старых и надёжных языков программирования. Используется для системного программирования, встраиваемых систем и ОС. Даёт глубокое понимание работы компьютера. Хорош для изучения базовых концепций. Применяется в области робототехники и микроконтроллерах.
+      </div>
+    </div>
+    <div class="slide" onclick="window.location.href='cpp.html'" style="cursor: pointer;">
+      <img src="https://img.icons8.com/color/960/c-plus-plus-logo.png" alt="C++">
+      <div class="caption">
+        C++ — язык для разработки производительных и масштабируемых программ. Основан на C и расширяет его объектно-ориентированными возможностями. Используется в игровой индустрии, системном программировании и инженерных приложениях.
+      </div>
+    </div>
+    <div class="slide" onclick="window.location.href='html.html'" style="cursor: pointer;">
+      <img src="https://img.icons8.com/color/960/html-5--v1.png" alt="HTML">
+      <div class="caption">
+        HTML — язык разметки, который лежит в основе всех веб-страниц. Он задаёт структуру контента и используется совместно с CSS и JavaScript.
+      </div>
+    </div>
+    <div class="slide" onclick="window.location.href='css.html'" style="cursor: pointer;">
+      <img src="https://img.icons8.com/color/960/css3.png" alt="CSS">
+      <div class="caption">
+        CSS — язык стилей, используемый для оформления веб-страниц. Позволяет управлять цветами, шрифтами, расположением элементов и адаптивностью.
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="prevSlide()">&#10094; Назад</button>
+    <button onclick="nextSlide()">Вперёд &#10095;</button>
+  </div>
+</section>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  setInterval(nextSlide, 4000);
+</script>
+
+<section class="team-section">
+  <h2>Наша команда</h2>
+  <div class="team-slider">
+    <div class="team-card active">
+      <img src="images/person1.jpg" alt="Иван Иванов">
+      <h3>Иван Иванов</h3>
+      <p>Frontend-разработчик, увлечён современными фреймворками и UX-дизайном.</p>
+    </div>
+    <div class="team-card">
+      <img src="images/person2.jpg" alt="Мария Смирнова">
+      <h3>Мария Смирнова</h3>
+      <p>Backend-инженер, специализируется на архитектуре серверных приложений.</p>
+    </div>
+    <div class="team-card">
+      <img src="images/person3.jpg" alt="Алексей Кузнецов">
+      <h3>Алексей Кузнецов</h3>
+      <p>Преподаватель по C/C++ и системному программированию, любит объяснять сложное просто.</p>
+    </div>
+  </div>
+  <div class="number-controls">
+    <button onclick="goToTeamSlide(0)">1</button>
+    <button onclick="goToTeamSlide(1)">2</button>
+    <button onclick="goToTeamSlide(2)">3</button>
+  </div>
+  
+</section>
+
+<!-- Контакты -->
+<section class="footer-section dark">
+  <h2>Контакты</h2>
+  <p>
+    📧 Email: info@fds-academy.ru<br>
+    ☎️ Телефон: +7 (999) 123-45-67<br>
+    📍 Адрес: г. Москва, ул. Кодеров, д. 42
+  </p>
+</section>
+
+<script>
+  let teamIndex = 0;
+  const teamCards = document.querySelectorAll('.team-card');
+  const numberButtons = document.querySelectorAll('.number-controls button');
+
+  function showTeamSlide(index) {
+    teamCards.forEach((card, i) => {
+      card.classList.remove('active');
+      if (i === index) {
+        card.classList.add('active');
+      }
+    });
+
+    numberButtons.forEach((btn, i) => {
+      btn.classList.toggle('active', i === index);
+    });
+  }
+
+  function goToTeamSlide(index) {
+    teamIndex = index;
+    showTeamSlide(teamIndex);
+  }
+
+  setInterval(() => {
+    teamIndex = (teamIndex + 1) % teamCards.length;
+    showTeamSlide(teamIndex);
+  }, 5000);
+</script>
+
+
+</body>
+</html>
