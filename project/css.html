@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>О языке HTML</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(145deg, #0a0a0a, #222);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      color: #00ffcc;
+    }
+
+    .hero .sub {
+      color: #aaff66;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .badge {
+      background-color: #d1ff00;
+      color: black;
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .section {
+      padding: 40px 20px;
+      background-color: #111;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      color: #00ffcc;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .footer-section.dark {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer-section.dark h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .footer-section.dark p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #cccccc;
+    }
+
+    pre {
+      background-color: #222;
+      color: #0f0;
+      padding: 15px;
+      text-align: left;
+      overflow: auto;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">HTML World</div>
+  </header>
+
+  <section class="hero">
+    <h1>HTML</h1>
+    <div class="sub">Язык разметки для веба</div>
+    <div class="badge">Структура, Основы, Необходимость</div>
+  </section>
+
+  <section class="section">
+    <h2>Что такое HTML?</h2>
+    <div class="description">
+      HTML (HyperText Markup Language) — это стандартный язык разметки, используемый для создания структуры веб-страниц. Он определяет, как элементы должны располагаться и отображаться в браузере.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Где используется HTML?</h2>
+    <div class="description">
+      <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #ccc; line-height: 1.6;">
+        <li>Создание структуры веб-сайтов</li>
+        <li>Вёрстка текста, изображений, таблиц и форм</li>
+        <li>Встраивание мультимедиа и скриптов</li>
+        <li>Создание семантической структуры документа</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Важные теги HTML</h2>
+    <div class="description">
+      <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #ccc; line-height: 1.6;">
+        <li><code>&lt;html&gt;</code> — корневой элемент страницы</li>
+        <li><code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code> — служебная информация</li>
+        <li><code>&lt;body&gt;</code> — основное содержимое</li>
+        <li><code>&lt;h1&gt;-&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code> — текстовая разметка</li>
+        <li><code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;form&gt;</code> — мультимедиа и формы</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Пример HTML-кода</h2>
+    <div class="description">
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Пример&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Привет, мир!&lt;/h1&gt;
+    &lt;p&gt;Это мой первый HTML-документ.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Полезные ресурсы</h2>
+    <div class="description">
+      <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #ccc; line-height: 1.6;">
+        <li><a href="https://developer.mozilla.org/ru/docs/Web/HTML" style="color:#00ffcc;" target="_blank">MDN Web Docs</a> — справочник по HTML</li>
+        <li><a href="https://html5book.ru/" style="color:#00ffcc;" target="_blank">HTML5 Book</a> — справочник на русском</li>
+        <li><a href="https://learn-html.org/" style="color:#00ffcc;" target="_blank">Learn HTML</a> — онлайн-учебник</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="footer-section dark">
+    <h2>Почему стоит уч
