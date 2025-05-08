@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>О языке HTML</title>
+  <title>О языке CSS</title>
   <style>
     body {
       margin: 0;
@@ -107,62 +107,72 @@
 <body>
 
   <header>
-    <div class="logo">HTML World</div>
+    <div class="logo">CSS World</div>
   </header>
 
   <section class="hero">
-    <h1>HTML</h1>
-    <div class="sub">Язык разметки для веба</div>
-    <div class="badge">Структура, Основы, Необходимость</div>
+    <h1>CSS</h1>
+    <div class="sub">Язык стилей для веб-страниц</div>
+    <div class="badge">Гибкий, Визуальный, Мощный</div>
   </section>
 
   <section class="section">
-    <h2>Что такое HTML?</h2>
+    <h2>Что такое CSS?</h2>
     <div class="description">
-      HTML (HyperText Markup Language) — это стандартный язык разметки, используемый для создания структуры веб-страниц. Он определяет, как элементы должны располагаться и отображаться в браузере.
+      CSS (Cascading Style Sheets) — это язык таблиц стилей, используемый для описания внешнего вида HTML-документов. Он позволяет управлять цветами, шрифтами, макетом и анимациями.
     </div>
   </section>
 
+  <div class="description">
+    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:800px; margin:0 auto;">
+      <iframe src="https://www.youtube.com/embed/1PnVor36_40" 
+              frameborder="0" 
+              allowfullscreen 
+              style="position:absolute; top:0; left:0; width:100%; height:100%;">
+      </iframe>
+    </div>
+    <p style="margin-top:15px;">Основы CSS — как стилизовать HTML-страницы, управлять цветами, шрифтами, макетами и анимацией.</p>
+  </div>
+</section>
+
   <section class="section">
-    <h2>Где используется HTML?</h2>
+    <h2>Где используется CSS?</h2>
     <div class="description">
       <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #ccc; line-height: 1.6;">
-        <li>Создание структуры веб-сайтов</li>
-        <li>Вёрстка текста, изображений, таблиц и форм</li>
-        <li>Встраивание мультимедиа и скриптов</li>
-        <li>Создание семантической структуры документа</li>
+        <li>Стилизация HTML-страниц</li>
+        <li>Создание адаптивной и кроссбраузерной вёрстки</li>
+        <li>Анимации и переходы</li>
+        <li>Визуальное оформление SPA и PWA</li>
       </ul>
     </div>
   </section>
 
   <section class="section">
-    <h2>Важные теги HTML</h2>
+    <h2>Популярные технологии на базе CSS</h2>
     <div class="description">
       <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #ccc; line-height: 1.6;">
-        <li><code>&lt;html&gt;</code> — корневой элемент страницы</li>
-        <li><code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code> — служебная информация</li>
-        <li><code>&lt;body&gt;</code> — основное содержимое</li>
-        <li><code>&lt;h1&gt;-&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code> — текстовая разметка</li>
-        <li><code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;form&gt;</code> — мультимедиа и формы</li>
+        <li><strong>SASS/SCSS</strong> — препроцессоры для более удобной работы с CSS</li>
+        <li><strong>Tailwind CSS</strong> — utility-first CSS фреймворк</li>
+        <li><strong>Bootstrap</strong> — CSS-библиотека для быстрой вёрстки</li>
+        <li><strong>CSS-in-JS</strong> — стилизация прямо в JavaScript (Emotion, Styled Components)</li>
       </ul>
     </div>
   </section>
 
   <section class="section">
-    <h2>Пример HTML-кода</h2>
+    <h2>Пример CSS-кода</h2>
     <div class="description">
       <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="ru"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Пример&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Привет, мир!&lt;/h1&gt;
-    &lt;p&gt;Это мой первый HTML-документ.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #00ffcc;
+  text-align: center;
+}
       </pre>
     </div>
   </section>
@@ -171,12 +181,20 @@
     <h2>Полезные ресурсы</h2>
     <div class="description">
       <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #ccc; line-height: 1.6;">
-        <li><a href="https://developer.mozilla.org/ru/docs/Web/HTML" style="color:#00ffcc;" target="_blank">MDN Web Docs</a> — справочник по HTML</li>
-        <li><a href="https://html5book.ru/" style="color:#00ffcc;" target="_blank">HTML5 Book</a> — справочник на русском</li>
-        <li><a href="https://learn-html.org/" style="color:#00ffcc;" target="_blank">Learn HTML</a> — онлайн-учебник</li>
+        <li><a href="https://developer.mozilla.org/ru/docs/Web/CSS" style="color:#00ffcc;" target="_blank">MDN Web Docs</a> — официальная документация по CSS</li>
+        <li><a href="https://css-tricks.com/" style="color:#00ffcc;" target="_blank">CSS-Tricks</a> — статьи и практики</li>
+        <li><a href="https://learn-css.org/" style="color:#00ffcc;" target="_blank">Learn CSS</a> — интерактивный учебник</li>
       </ul>
     </div>
   </section>
 
   <section class="footer-section dark">
-    <h2>Почему стоит уч
+    <h2>Почему стоит учить CSS?</h2>
+    <p>
+      CSS — это фундамент современного веб-дизайна. Он позволяет создавать красивые, отзывчивые и доступные интерфейсы, делая сайты удобными и привлекательными.
+    </p>
+  </section>
+ 
+
+</body>
+</html>

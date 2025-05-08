@@ -2,56 +2,210 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Язык C — основа системного программирования</title>
-  <link rel="stylesheet" href="style.css"> 
+  <title>О языке C</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(145deg, #0a0a0a, #222);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      color: #00ffcc;
+    }
+
+    .hero .sub {
+      color: #aaff66;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .badge {
+      background-color: #d1ff00;
+      color: black;
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .section {
+      padding: 40px 20px;
+      background-color: #111;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      color: #00ffcc;
+      margin-bottom: 20px;
+    }
+
+    .slider {
+      max-width: 800px;
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      position: relative;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide img {
+      width: 70%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .caption {
+      background-color: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 15px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .description {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .controls button {
+      background-color: #00ffcc;
+      border: none;
+      color: #000;
+      padding: 10px 16px;
+      margin: 0 5px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .controls button:hover {
+      background-color: #00ddaa;
+    }
+
+    .footer-section.dark {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer-section.dark h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .footer-section.dark p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #cccccc;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">C Language</div>
+    <div class="logo">C World</div>
   </header>
 
   <section class="hero">
     <h1>Язык программирования C</h1>
-    <div class="sub">Классика и фундамент ИТ-индустрии</div>
-    <div class="badge">Надёжный • Быстрый • Минималистичный</div>
+    <div class="sub">Быстрый, надёжный, системный</div>
+    <div class="badge">Процедурный, Эффективный, Основа ОС</div>
   </section>
 
-  <section class="section">
-    <h2>Что такое C?</h2>
-    <div class="description">
-      C — это процедурный язык программирования, разработанный в начале 1970-х годов. Он обеспечивает низкоуровневый доступ к памяти, используется для создания операционных систем, драйверов, встраиваемого ПО и является базой для многих других языков, включая C++, Java и Python.
-    </div>
-  </section>
-
+ 
   <section class="section">
     <h2>Где используется C?</h2>
     <div class="description">
-      <ul style="text-align: left; max-width: 700px; margin: 0 auto; color: #ccc; line-height: 1.6;">
-        <li>Операционные системы (Unix, Linux, Windows)</li>
-        <li>Микроконтроллеры и встроенные устройства</li>
-        <li>Разработка драйверов и прошивок</li>
-        <li>Высокопроизводительные системы</li>
-        <li>Ядра интерпретаторов и компиляторов</li>
+      <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #ccc; line-height: 1.6;">
+        <li>Операционные системы (например, ядро Linux)</li>
+        <li>Системное и встроенное ПО</li>
+        <li>Микроконтроллеры и IoT-устройства</li>
+        <li>Компиляторы и драйверы</li>
       </ul>
     </div>
   </section>
 
   <section class="section">
-    <h2>Почему выбирают C?</h2>
+    <h2>Что такое язык C?</h2>
     <div class="description">
-      <ul style="text-align: left; max-width: 700px; margin: 0 auto; color: #ccc; line-height: 1.6;">
-        <li>Минимализм и контроль: можно управлять памятью вручную</li>
-        <li>Высокая производительность</li>
-        <li>Широкая совместимость и кроссплатформенность</li>
-        <li>Используется в критически важных системах</li>
-        <li>Идеален для изучения основ программирования</li>
-      </ul>
+      C — это язык программирования общего назначения, созданный в 1972 году. Он обеспечивает низкоуровневый контроль над оборудованием, используется в операционных системах, драйверах, микроконтроллерах и встраиваемых устройствах.
+    </div>
+    <div style="margin-top: 30px;">
+      <iframe width="560" height="315" 
+              src="https://www.youtube.com/embed/KJgsSFOSQv0" 
+              title="Введение в язык C" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen 
+              style="max-width: 100%; border-radius: 10px;">
+      </iframe>
     </div>
   </section>
 
   <section class="section">
-    <h2>Пример простого кода на C</h2>
+      <div class="slide">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/C_Programming_Language.svg" alt="Синтаксис C">
+        <div class="caption">Синтаксис языка C прост, но требует точности — отличный выбор для будущих инженеров.</div>
+      </div>
+      <div class="slide">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/C_Programming_Code_Example.png" alt="Код на C">
+        <div class="caption">Код на C может управлять памятью напрямую и выполнять задачи максимально эффективно.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Пример кода на C</h2>
     <div class="description">
       <pre style="background-color:#222; color:#0f0; padding:15px; text-align:left; overflow:auto; max-width:800px; margin:0 auto; border-radius:10px;">
 #include &lt;stdio.h&gt;
@@ -65,21 +219,18 @@ int main() {
   </section>
 
   <section class="section">
-    <h2>Ресурсы для изучения</h2>
+    <h2>Полезные ресурсы</h2>
     <div class="description">
-      <ul style="text-align: left; max-width: 700px; margin: 0 auto; color: #ccc; line-height: 1.6;">
-        <li><a href="https://learnc.org/" target="_blank" style="color:#00ffcc;">LearnC.org</a> — интерактивное обучение</li>
-        <li><a href="https://en.cppreference.com/w/c" target="_blank" style="color:#00ffcc;">cppreference (раздел C)</a> — справочник</li>
-        <li><a href="https://habr.com/ru/search/?q=C+язык&target_type=posts" target="_blank" style="color:#00ffcc;">Статьи на Habr</a> — материалы на русском</li>
-        <li><a href="https://www.geeksforgeeks.org/c-programming-language/" target="_blank" style="color:#00ffcc;">GeeksForGeeks — C Language</a></li>
+      <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #ccc; line-height: 1.6;">
+        <li><a href="https://en.cppreference.com/w/c" style="color:#00ffcc;" target="_blank">cppreference.com</a> — справочник по C</li>
       </ul>
     </div>
   </section>
 
   <section class="footer-section dark">
-    <h2>Почему важно знать C?</h2>
+    <h2>Почему стоит изучать C?</h2>
     <p>
-      Язык C — это база системного программирования. Он учит понимать, как работают память, компиляция и процессор. Если вы хотите стать разработчиком системного уровня, работать с встраиваемыми системами или просто лучше понимать, как всё работает — C даст вам это знание.
+      Язык C — основа системного программирования. Его знание позволяет понимать, как работает память, процессор и операционные системы, а также разрабатывать критически важные системы.
     </p>
   </section>
 
