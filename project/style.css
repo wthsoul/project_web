@@ -1,269 +1,282 @@
+/* === Общие стили === */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
-  }
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
 
-  header {
-    background-color: #111;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
+header {
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
 
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #00ffcc;
-  }
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ffcc;
+}
 
-  .hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(145deg, #0a0a0a, #222);
-  }
+/* === Hero-блок === */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(145deg, #0a0a0a, #222);
+}
 
-  .hero h1 {
-    font-size: 36px;
-    color: #00ffcc;
-  }
+.hero h1 {
+  font-size: 36px;
+  color: #00ffcc;
+}
 
-  .hero .sub {
-    color: #aaff66;
-    font-size: 18px;
-    margin-top: 10px;
-  }
+.hero .sub {
+  color: #aaff66;
+  font-size: 18px;
+  margin-top: 10px;
+}
 
-  .badge {
-    background-color: #d1ff00;
-    color: black;
-    display: inline-block;
-    padding: 10px 18px;
-    border-radius: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
+.badge {
+  background-color: #d1ff00;
+  color: black;
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
 
-  .section {
-    padding: 40px 20px;
-    background-color: #111;
-    text-align: center;
-  }
+/* === Reveal-анимация === */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
 
-  .section h2 {
-    font-size: 28px;
-    color: #00ffcc;
-    margin-bottom: 20px;
-  }
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  .slider {
-    max-width: 800px;
-    margin: 30px auto;
-    overflow: hidden;
-    border-radius: 12px;
-    position: relative;
-  }
+/* === Карточки, тени, ховер === */
+.slide, .team-card, .faq-item {
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .slide {
-    display: none;
-    position: relative;
-  }
+.slide:hover, .team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
 
-  .slide.active {
-    display: block;
-  }
+/* === Заголовки === */
+.section h2::before,
+.team-section h2::before,
+.faq-container h2::before {
+  content: "✨ ";
+  color: #00ffcc;
+}
 
-  .slide img {
-    width: 70%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
+.section {
+  padding: 40px 20px;
+  background-color: #111;
+  text-align: center;
+}
 
-  .caption {
-    background-color: rgba(0,0,0,0.7);
-    color: #fff;
-    padding: 15px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 14px;
-    text-align: left;
-  }
+.section h2 {
+  font-size: 28px;
+  color: #00ffcc;
+  margin-bottom: 20px;
+}
 
-  .description {
-    max-width: 800px;
-    margin: 20px auto;
-    font-size: 18px;
-    color: #ccc;
-  }
+/* === Слайдер с изображениями === */
+.slider {
+  max-width: 800px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
 
-  .controls {
-    text-align: center;
-    margin-top: 10px;
-  }
+.slide {
+  display: none;
+  position: relative;
+}
 
-  .controls button {
-    background-color: #00ffcc;
-    border: none;
-    color: #000;
-    padding: 10px 16px;
-    margin: 0 5px;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-  }
+.slide.active {
+  display: block;
+}
 
-  .controls button:hover {
-    background-color: #00ddaa;
-  }
+.slide img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
-  .footer-section.dark {
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .footer-section.dark h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #ffffff;
-  }
-  
-  .footer-section.dark p {
-    font-size: 16px;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-    color: #cccccc;
-  }
-  
-  .team-section {
-    background-color: #111;
-    color: #f0f0f0;
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .team-section h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    color: #fff;
-  }
-  
-  .team-slider {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .team-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border-radius: 22px;
-    background-color: #1f1f1f;
-    width: 250px;
-  }
-  
-  .team-card img {
-    width: 180px;
-    height: 180px;
-    border-radius: 10px; /* квадрат с лёгким скруглением */
-    margin-bottom: 25px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .team-card img:hover {
-    transform: scale(1.05);
-  }  
+.caption {
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-align: left;
+}
 
-  .team-card h3 {
-    font-size: 20px;
-    margin: 10px 0 5px;
-    color: #fff;
-  }
-  
-  .team-card p {
-    font-size: 14px;
-    color: #ccc;
-    max-width: 220px;
-    text-align: center;
-  }
-  
-  /* Удаляем управление слайдерами */
-  .controls, .number-controls {
-    display: none;
-  }
-  
-  .team-card.active {
-    display: flex;
-    opacity: 1;
-    transform: translateX(0);
-  }
-  .team-card h3 {
-    font-size: 20px;
-    margin: 10px 0 5px;
-    color: #fff;
-  }
-  
-  .team-card p {
-    font-size: 14px;
-    color: #ccc;
-    max-width: 300px;
-  }
-  
-  .controls button {
-    margin: 15px 10px 0;
-    padding: 10px 20px;
-    background-color: #333;
-    border: none;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .controls button:hover {
-    background-color: #555;
-  }
+.description {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 18px;
+  color: #ccc;
+}
 
-  .number-controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 10px;
-  }
-  
-  .number-controls button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #333;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  .number-controls button:hover {
-    background-color: #555;
-    transform: scale(1.1);
-  }
-  
-  .number-controls button.active {
-    background-color: #007bff;
-  }
-  
+/* === КНОПКИ управления (универсальные) === */
+.controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.controls button {
+  background-color: #00ffcc;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  margin: 0 8px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 255, 204, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #00e6b8;
+  transform: translateY(-3px);
+}
+
+body.dark-mode .controls button {
+  background-color: #00ccaa;
+  color: #000;
+  box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3);
+}
+
+body.dark-mode .controls button:hover {
+  background-color: #00bfa6;
+}
+
+/* === Команда / Команда-блок === */
+.team-section {
+  background-color: #111;
+  color: #f0f0f0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.team-slider {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 22px;
+  background-color: #1f1f1f;
+  width: 250px;
+}
+
+.team-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-card img:hover {
+  transform: scale(1.05);
+}
+
+.team-card h3 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+  color: #fff;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #ccc;
+  max-width: 220px;
+  text-align: center;
+}
+
+/* === Числовая навигация (если нужно) === */
+.number-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.number-controls button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.number-controls button:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+.number-controls button.active {
+  background-color: #007bff;
+}
+
+/* === Футер === */
+.footer-section.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-section.dark h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-section.dark p {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #cccccc;
+}

@@ -8,6 +8,7 @@
 </head>
 <body>
 
+
 <header>
   <div class="logo">FDS</div>
 </header>
@@ -57,11 +58,11 @@
     </div>
   </div>
 
-  <div class="controls">
-    <button onclick="prevSlide()">&#10094; Назад</button>
-    <button onclick="nextSlide()">Вперёд &#10095;</button>
-  </div>
-</section>
+  <div class="controls" style="text-align:center; margin-top: 20px;">
+  <button class="nav-btn" onclick="prevSlide()">&#10094; Назад</button>
+  <button class="nav-btn" onclick="nextSlide()">Вперёд &#10095;</button>
+</div>
+
 
 <script>
   let currentIndex = 0;
@@ -128,6 +129,32 @@
 </section>
 
 
+<section class="section">
+  <h2>Часто задаваемые вопросы</h2>
+  <div class="faq-container" style="max-width:800px; margin:0 auto; text-align:left;">
+    <div class="faq-item">
+      <h3 onclick="toggleFaq(this)" style="cursor:pointer; color:#00ffcc;">Какие языки программирования лучше начать изучать первым?</h3>
+      <p style="display:none; color:#ccc;">Лучше конечно  начинать с HTML, CSS и JavaScript, так как они просты в освоении и применимы на практике сразу, спросити почему потому что их не так тяжело выучить как  более тежолые такие как C,C++, JAVA.</p>
+    </div>
+    <div class="faq-item">
+      <h3 onclick="toggleFaq(this)" style="cursor:pointer; color:#00ffcc;">Как долго учиться, чтобы начать работать?</h3>
+      <p style="display:none; color:#ccc;">При регулярных занятиях (2–3 часа в день) базу можно освоить за 3–4 месяца и искать стажировки.</p>
+    </div>
+    <div class="faq-item">
+      <h3 onclick="toggleFaq(this)" style="cursor:pointer; color:#00ffcc;">Нужно ли знать английский?</h3>
+      <p style="display:none; color:#ccc;">Желательно, особенно для чтения Книги в библиотеке либо аудио  и общения с международным сообществом. Но начать можно и без него.</p>
+    </div>
+  </div>
+</section>
+<script>
+  function toggleFaq(element) {
+    const content = element.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+
+ 
 <!-- Контакты -->
 <section class="footer-section dark">
   <h2>Контакты</h2>
@@ -167,6 +194,36 @@
   }, 5000);
 </script>
 
+
+<button id="backToTop" style="position:fixed; bottom:20px; right:20px; padding:10px 15px; border:none; background-color:#00ffcc; color:#000; border-radius:5px; cursor:pointer; display:none; z-index:999;">↑ Наверх</button>
+<script>
+  const backToTop = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTop.style.display = window.pageYOffset > 300 ? "block" : "none";
+  });
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+
+<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("visible");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  window.addEventListener("load", revealOnScroll);
+</script>
 
 </body>
 </html>
